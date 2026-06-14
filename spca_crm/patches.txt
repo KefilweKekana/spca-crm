@@ -1,0 +1,5 @@
+[pre_model_sync]
+# Pre-model sync patches
+
+[post_model_sync]
+# Post-model sync patches
