@@ -75,7 +75,7 @@ spca_crm = {
                     reqd: 1,
                     get_query: () => {
                         return {
-                            query: 'spca_crm.doctype.cruelty_report.cruelty_report.get_inspector_query',
+                            query: 'spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.get_inspector_query',
                         };
                     },
                 },
@@ -97,7 +97,7 @@ spca_crm = {
 
     assign_to(frm, inspector, set_status = true) {
         frappe.call({
-            method: 'spca_crm.doctype.cruelty_report.cruelty_report.assign_inspector',
+            method: 'spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.assign_inspector',
             args: {
                 case_name: frm.doc.name,
                 inspector: inspector || '',
@@ -118,7 +118,7 @@ spca_crm = {
 
         frm.add_custom_button(__('Mark First Response'), () => {
             frappe.call({
-                method: 'spca_crm.doctype.cruelty_report.cruelty_report.mark_first_response',
+                method: 'spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.mark_first_response',
                 args: { case_name: frm.doc.name },
                 callback() {
                     frm.reload_doc();
@@ -137,7 +137,7 @@ spca_crm = {
                 },
                 (values) => {
                     frappe.call({
-                        method: 'spca_crm.doctype.cruelty_report.cruelty_report.escalate_case',
+                        method: 'spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.escalate_case',
                         args: { case_name: frm.doc.name, reason: values.reason },
                         callback() {
                             frm.reload_doc();

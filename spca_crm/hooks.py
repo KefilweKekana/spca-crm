@@ -35,10 +35,10 @@ fixtures = [
 # ------------------ DocType Events ------------------
 doc_events = {
     "Cruelty Report": {
-        "before_insert": "spca_crm.doctype.cruelty_report.cruelty_report.before_insert",
-        "validate": "spca_crm.doctype.cruelty_report.cruelty_report.validate",
-        "on_update": "spca_crm.doctype.cruelty_report.cruelty_report.on_update",
-        "on_submit": "spca_crm.doctype.cruelty_report.cruelty_report.on_submit",
+        "before_insert": "spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.before_insert",
+        "validate": "spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.validate",
+        "on_update": "spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.on_update",
+        "on_submit": "spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.on_submit",
     },
     "Cruelty_Form": {
         "after_insert": "spca_crm.webform_hooks.on_cruelty_form_after_insert",
@@ -53,10 +53,10 @@ doctype_js = {
 # ------------------ Scheduled Tasks ------------------
 scheduler_events = {
     "hourly": [
-        "spca_crm.doctype.cruelty_report.cruelty_report.notify_overdue_reports",
+        "spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.notify_overdue_reports",
     ],
     "daily": [
-        "spca_crm.doctype.cruelty_report.cruelty_report.auto_close_resolved_cases",
+        "spca_crm.spca_crm.doctype.cruelty_report.cruelty_report.auto_close_resolved_cases",
     ],
 }
 
