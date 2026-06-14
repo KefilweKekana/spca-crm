@@ -1,6 +1,7 @@
 [
   {
     "doctype": "Workflow",
+    "name": "Cruelty Report Workflow",
     "workflow_name": "Cruelty Report Workflow",
     "document_type": "Cruelty Report",
     "is_active": 1,

@@ -78,9 +78,15 @@ def load_fixtures():
             data = json.load(f)
 
         for doc in data:
-            if frappe.db.exists(doc["doctype"], doc["name"]):
+            doctype = doc.get("doctype")
+            # Most fixtures carry an explicit "name"; some (e.g. Workflow) are
+            # named after a field instead, so fall back to those.
+            name = doc.get("name") or doc.get("workflow_name")
+            if name and frappe.db.exists(doctype, name):
                 continue
             try:
                 frappe.get_doc(doc).insert(ignore_permissions=True)
+            except frappe.DuplicateEntryError:
+                continue
             except Exception:
                 frappe.log_error(title=f"SPCA Fixture Load Failed: {filename}")
