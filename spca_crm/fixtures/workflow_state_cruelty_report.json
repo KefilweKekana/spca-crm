@@ -1,0 +1,44 @@
+[
+  {
+    "doctype": "Workflow State",
+    "name": "Draft",
+    "workflow_state_name": "Draft",
+    "style": ""
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Assigned",
+    "workflow_state_name": "Assigned",
+    "style": "Info"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "In Progress",
+    "workflow_state_name": "In Progress",
+    "style": "Warning"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Escalated",
+    "workflow_state_name": "Escalated",
+    "style": "Danger"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Resolved",
+    "workflow_state_name": "Resolved",
+    "style": "Success"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Closed",
+    "workflow_state_name": "Closed",
+    "style": "Success"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Reopened",
+    "workflow_state_name": "Reopened",
+    "style": "Warning"
+  }
+]

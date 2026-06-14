@@ -24,6 +24,12 @@ fixtures = [
         ],
     },
     {
+        "dt": "Workflow Action Master",
+        "filters": [
+            ["name", "in", ["Assign", "Start Investigation", "Escalate", "Resolve", "Close", "Reopen"]]
+        ],
+    },
+    {
         "dt": "Notification",
         "filters": [["document_type", "in", ["Cruelty Report"]]],
     },

@@ -1,0 +1,32 @@
+[
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Assign",
+    "workflow_action_name": "Assign"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Start Investigation",
+    "workflow_action_name": "Start Investigation"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Escalate",
+    "workflow_action_name": "Escalate"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Resolve",
+    "workflow_action_name": "Resolve"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Close",
+    "workflow_action_name": "Close"
+  },
+  {
+    "doctype": "Workflow Action Master",
+    "name": "Reopen",
+    "workflow_action_name": "Reopen"
+  }
+]
