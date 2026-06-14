@@ -37,7 +37,7 @@ frappe.listview_settings['Cruelty Report'] = {
                 primary_action(values) {
                     d.hide();
                     frappe.call({
-                        method: 'spca_crm.spca_crm.doctype.cruelty_report.cruelty_report_list.bulk_assign_inspector',
+                        method: 'spca_crm.doctype.cruelty_report.cruelty_report_list.bulk_assign_inspector',
                         args: {
                             case_names: JSON.stringify(selected.map(s => s.name)),
                             inspector: values.inspector,

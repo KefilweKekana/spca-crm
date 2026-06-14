@@ -2,7 +2,7 @@ import unittest
 
 import frappe
 
-from spca_crm.spca_crm.doctype.cruelty_report.cruelty_report import assign_inspector
+from spca_crm.doctype.cruelty_report.cruelty_report import assign_inspector
 
 
 class TestCrueltyReport(unittest.TestCase):

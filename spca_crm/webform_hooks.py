@@ -1,6 +1,6 @@
 import frappe
 
-from spca_crm.spca_crm.utils import create_cruelty_report_from_webform
+from spca_crm.utils import create_cruelty_report_from_webform
 
 
 def on_cruelty_form_after_insert(doc, method=None):
@@ -9,7 +9,7 @@ def on_cruelty_form_after_insert(doc, method=None):
     Add this to hooks.py:
         doc_events = {
             "Cruelty_Form": {
-                "after_insert": "spca_crm.spca_crm.webform_hooks.on_cruelty_form_after_insert"
+                "after_insert": "spca_crm.webform_hooks.on_cruelty_form_after_insert"
             }
         }
     """

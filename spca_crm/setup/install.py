@@ -55,7 +55,7 @@ def create_default_settings():
 
 def load_fixtures():
     """Load static fixture JSON files bundled with the app."""
-    fixture_dir = frappe.get_app_path("spca_crm", "spca_crm", "fixtures")
+    fixture_dir = frappe.get_app_path("spca_crm", "fixtures")
     if not os.path.exists(fixture_dir):
         return
 
