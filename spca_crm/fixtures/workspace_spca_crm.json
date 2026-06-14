@@ -2,6 +2,7 @@
   {
     "doctype": "Workspace",
     "name": "SPCA CRM",
+    "type": "Workspace",
     "title": "SPCA Helpdesk",
     "for_user": "",
     "parent_page": "",
@@ -12,6 +13,65 @@
     "icon": "heart",
     "module": "SPCA CRM",
     "hide_custom": 0,
+    "number_cards": [
+      {
+        "number_card_name": "Open Cruelty Cases",
+        "label": "Open Cruelty Cases"
+      },
+      {
+        "number_card_name": "Cases Due Today",
+        "label": "Cases Due Today"
+      },
+      {
+        "number_card_name": "SLA Breached",
+        "label": "SLA Breached"
+      }
+    ],
+    "charts": [
+      {
+        "chart_name": "Cases by Status",
+        "label": "Cases by Status"
+      },
+      {
+        "chart_name": "Cases by Priority",
+        "label": "Cases by Priority"
+      },
+      {
+        "chart_name": "Monthly Trend",
+        "label": "Monthly Trend"
+      }
+    ],
+    "shortcuts": [
+      {
+        "type": "DocType",
+        "label": "New Cruelty Report",
+        "link_to": "Cruelty Report",
+        "doc_view": "New"
+      },
+      {
+        "type": "DocType",
+        "label": "Cruelty Reports",
+        "link_to": "Cruelty Report",
+        "doc_view": "List"
+      },
+      {
+        "type": "DocType",
+        "label": "Complainants",
+        "link_to": "Complainant",
+        "doc_view": "List"
+      },
+      {
+        "type": "DocType",
+        "label": "SPCA CRM Settings",
+        "link_to": "SPCA CRM Settings"
+      },
+      {
+        "type": "DocType",
+        "label": "SPCA Branches",
+        "link_to": "SPCA Branch",
+        "doc_view": "List"
+      }
+    ],
     "roles": [
       {
         "role": "SPCA Inspector"
