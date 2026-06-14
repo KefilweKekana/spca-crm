@@ -1,7 +1,7 @@
 [
   {
     "doctype": "Web Form",
-    "name": "public-cruelty-report",
+    "name": "report-cruelty",
     "title": "Report Animal Cruelty",
     "route": "report-cruelty",
     "doc_type": "Cruelty Report",
