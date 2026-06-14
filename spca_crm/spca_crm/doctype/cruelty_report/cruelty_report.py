@@ -162,7 +162,7 @@ class CrueltyReport(Document):
             )
         except Exception:
             frappe.log_error(
-                title="SPCA CRM Notification Failed",
+                title="SPCA Helpdesk Notification Failed",
                 message=frappe.get_traceback(),
             )
 

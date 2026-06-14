@@ -1,9 +1,9 @@
 from . import __version__ as app_version
 
 app_name = "spca_crm"
-app_title = "SPCA CRM"
+app_title = "SPCA Helpdesk"
 app_publisher = "SPCA Digital Team"
-app_description = "ERPNext CRM module for SPCA cruelty report management, inspections and case workflow."
+app_description = "ERPNext Helpdesk module for SPCA cruelty report management, inspections and case workflow."
 app_email = "dev@spca.org.za"
 app_license = "MIT"
 app_version = app_version

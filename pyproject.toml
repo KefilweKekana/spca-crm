@@ -3,7 +3,7 @@ name = "spca_crm"
 authors = [
     { name = "SPCA Digital Team", email = "dev@spca.org.za" }
 ]
-description = "ERPNext CRM module for SPCA cruelty report management, inspections and case workflow."
+description = "ERPNext Helpdesk module for SPCA cruelty report management, inspections and case workflow."
 requires-python = ">=3.10"
 dynamic = ["version"]
 dependencies = []

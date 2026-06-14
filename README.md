@@ -1,4 +1,4 @@
-# SPCA CRM
+# SPCA Helpdesk
 
 An ERPNext module for SPCA organisations to manage cruelty reports, inspections, and case workflows.
 
