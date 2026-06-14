@@ -9,7 +9,7 @@
     "based_on": "report_date",
     "time_interval": "Monthly",
     "filters_json": "[]",
-    "is_standard": 1,
+    "is_standard": 0,
     "module": "SPCA CRM"
   }
 ]

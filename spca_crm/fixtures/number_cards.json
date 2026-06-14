@@ -7,7 +7,7 @@
     "function": "Count",
     "aggregate_function_based_on": "name",
     "filters_json": "[[\"Cruelty Report\",\"status\",\"not in\",[\"Resolved\",\"Closed\"],false]]",
-    "is_standard": 1,
+    "is_standard": 0,
     "module": "SPCA CRM"
   },
   {
@@ -18,7 +18,7 @@
     "function": "Count",
     "aggregate_function_based_on": "name",
     "filters_json": "[[\"Cruelty Report\",\"resolution_due\",\"Timespan\",\"today\",false],[\"Cruelty Report\",\"status\",\"not in\",[\"Resolved\",\"Closed\"],false]]",
-    "is_standard": 1,
+    "is_standard": 0,
     "module": "SPCA CRM"
   },
   {
@@ -29,7 +29,7 @@
     "function": "Count",
     "aggregate_function_based_on": "name",
     "filters_json": "[[\"Cruelty Report\",\"sla_breached\",\"=\",1,false],[\"Cruelty Report\",\"status\",\"not in\",[\"Resolved\",\"Closed\"],false]]",
-    "is_standard": 1,
+    "is_standard": 0,
     "module": "SPCA CRM"
   }
 ]

@@ -1,6 +1,3 @@
-import json
-import os
-
 import frappe
 
 
@@ -15,13 +12,11 @@ def after_install():
     create_roles()
     create_default_branch()
     create_default_settings()
-    load_fixtures()
 
 
 def after_migrate():
     create_roles()
     create_default_settings()
-    load_fixtures()
 
 
 def create_roles():
@@ -51,42 +46,3 @@ def create_default_settings():
         settings.role_allowed_to_convert = "SPCA Manager"
         settings.default_priority = "Medium"
         settings.save(ignore_permissions=True)
-
-
-def load_fixtures():
-    """Load static fixture JSON files bundled with the app."""
-    fixture_dir = frappe.get_app_path("spca_crm", "fixtures")
-    if not os.path.exists(fixture_dir):
-        return
-
-    fixture_files = [
-        "workflow_cruelty_report.json",
-        "notification_cruelty_report.json",
-        "workspace_spca_crm.json",
-        "dashboard_chart_cases_by_status.json",
-        "dashboard_chart_cases_by_priority.json",
-        "dashboard_chart_monthly_trend.json",
-        "number_cards.json",
-        "web_form_public_cruelty_report.json",
-    ]
-
-    for filename in fixture_files:
-        filepath = os.path.join(fixture_dir, filename)
-        if not os.path.exists(filepath):
-            continue
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-        for doc in data:
-            doctype = doc.get("doctype")
-            # Most fixtures carry an explicit "name"; some (e.g. Workflow) are
-            # named after a field instead, so fall back to those.
-            name = doc.get("name") or doc.get("workflow_name")
-            if name and frappe.db.exists(doctype, name):
-                continue
-            try:
-                frappe.get_doc(doc).insert(ignore_permissions=True)
-            except frappe.DuplicateEntryError:
-                continue
-            except Exception:
-                frappe.log_error(title=f"SPCA Fixture Load Failed: {filename}")
