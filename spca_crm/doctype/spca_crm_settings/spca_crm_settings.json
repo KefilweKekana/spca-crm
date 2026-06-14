@@ -1,0 +1,140 @@
+{
+    "actions": [],
+    "allow_rename": 0,
+    "creation": "2025-06-14 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "webform_section",
+        "web_form_doctype",
+        "webform_route",
+        "allow_anonymous_reports",
+        "auto_convert_submissions",
+        "permissions_section",
+        "role_allowed_to_convert",
+        "default_assignment_section",
+        "default_branch",
+        "default_priority",
+        "auto_assign_to",
+        "field_mapping_section",
+        "field_mapping"
+    ],
+    "fields": [
+        {
+            "fieldname": "webform_section",
+            "fieldtype": "Section Break",
+            "label": "Public Web Form"
+        },
+        {
+            "default": "Cruelty_Form",
+            "fieldname": "web_form_doctype",
+            "fieldtype": "Data",
+            "label": "Web Form DocType",
+            "reqd": 1
+        },
+        {
+            "default": "report",
+            "fieldname": "webform_route",
+            "fieldtype": "Data",
+            "label": "Web Form Route"
+        },
+        {
+            "default": "1",
+            "fieldname": "allow_anonymous_reports",
+            "fieldtype": "Check",
+            "label": "Allow Anonymous Reports"
+        },
+        {
+            "default": "1",
+            "fieldname": "auto_convert_submissions",
+            "fieldtype": "Check",
+            "label": "Auto-convert Submissions to Cruelty Report"
+        },
+        {
+            "fieldname": "permissions_section",
+            "fieldtype": "Section Break",
+            "label": "Permissions"
+        },
+        {
+            "default": "SPCA Manager",
+            "fieldname": "role_allowed_to_convert",
+            "fieldtype": "Link",
+            "label": "Role Allowed to Convert Web Submissions",
+            "options": "Role"
+        },
+        {
+            "fieldname": "default_assignment_section",
+            "fieldtype": "Section Break",
+            "label": "Defaults & Assignment"
+        },
+        {
+            "fieldname": "default_branch",
+            "fieldtype": "Link",
+            "label": "Default Branch",
+            "options": "SPCA Branch"
+        },
+        {
+            "default": "Medium",
+            "fieldname": "default_priority",
+            "fieldtype": "Select",
+            "label": "Default Priority",
+            "options": "Low\nMedium\nHigh\nCritical"
+        },
+        {
+            "fieldname": "auto_assign_to",
+            "fieldtype": "Link",
+            "label": "Auto-assign New Reports To",
+            "options": "User"
+        },
+        {
+            "fieldname": "field_mapping_section",
+            "fieldtype": "Section Break",
+            "label": "Field Mapping"
+        },
+        {
+            "fieldname": "field_mapping",
+            "fieldtype": "Table",
+            "label": "Web Form → Cruelty Report Field Mapping",
+            "options": "Web Form Field Mapping"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "issingle": 1,
+    "links": [],
+    "modified": "2025-06-14 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "SPCA CRM",
+    "name": "SPCA CRM Settings",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "SPCA Manager",
+            "share": 0,
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+}

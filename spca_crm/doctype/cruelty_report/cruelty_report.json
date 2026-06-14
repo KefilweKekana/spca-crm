@@ -1,0 +1,465 @@
+{
+    "actions": [],
+    "allow_events_in_timeline": 1,
+    "allow_import": 1,
+    "autoname": "naming_series:",
+    "creation": "2025-06-14 12:00:00.000000",
+    "default_view": "List",
+    "doctype": "DocType",
+    "document_type": "Document",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "case_info_section",
+        "naming_series",
+        "case_id",
+        "report_date",
+        "report_received_via",
+        "branch",
+        "complainant",
+        "status",
+        "priority",
+        "assigned_inspector",
+        "column_break_1",
+        "case_age_days",
+        "is_anonymous",
+        "is_urgent",
+        "incident_section",
+        "incident_date",
+        "incident_time",
+        "location",
+        "suburb",
+        "city",
+        "province",
+        "postal_code",
+        "gps_coordinates",
+        "location_verified",
+        "column_break_2",
+        "animal_section",
+        "animal_count",
+        "animals_involved",
+        "allegation_section",
+        "suspected_violation",
+        "allegation_description",
+        "evidence_photos",
+        "people_section",
+        "suspects",
+        "witnesses",
+        "visits_notes_section",
+        "inspection_visits",
+        "case_notes",
+        "resolution_section",
+        "resolution_summary",
+        "resolution_outcome",
+        "legal_action_taken",
+        "resolved_by",
+        "resolved_at",
+        "closure_section",
+        "closed_by",
+        "closed_at",
+        "closure_reason",
+        "sla_section",
+        "first_response_due",
+        "first_responded_at",
+        "response_time_hours",
+        "resolution_due",
+        "resolution_time_hours",
+        "sla_breached"
+    ],
+    "fields": [
+        {
+            "collapsible": 0,
+            "fieldname": "case_info_section",
+            "fieldtype": "Section Break",
+            "label": "Case Information"
+        },
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Naming Series",
+            "options": "CR-YYYY-.#####",
+            "reqd": 1
+        },
+        {
+            "fieldname": "case_id",
+            "fieldtype": "Data",
+            "in_global_search": 1,
+            "in_list_view": 1,
+            "label": "Case ID",
+            "read_only": 1,
+            "unique": 1
+        },
+        {
+            "default": "Today",
+            "fieldname": "report_date",
+            "fieldtype": "Date",
+            "in_list_view": 1,
+            "label": "Report Date",
+            "reqd": 1
+        },
+        {
+            "fieldname": "report_received_via",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Received Via",
+            "options": "Phone\nEmail\nWeb Form\nWhatsApp\nSMS\nWalk-in\nSocial Media\nReferral\nOther",
+            "reqd": 1
+        },
+        {
+            "fieldname": "branch",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "SPCA Branch",
+            "options": "SPCA Branch",
+            "reqd": 1
+        },
+        {
+            "fieldname": "complainant",
+            "fieldtype": "Link",
+            "label": "Complainant",
+            "options": "Complainant"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "Draft\nAssigned\nIn Progress\nEscalated\nResolved\nClosed\nReopened",
+            "reqd": 1
+        },
+        {
+            "fieldname": "priority",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Priority",
+            "options": "Low\nMedium\nHigh\nCritical",
+            "reqd": 1
+        },
+        {
+            "fieldname": "assigned_inspector",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Assigned Inspector",
+            "options": "User"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "case_age_days",
+            "fieldtype": "Int",
+            "label": "Case Age (Days)",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "is_anonymous",
+            "fieldtype": "Check",
+            "label": "Anonymous Report"
+        },
+        {
+            "default": "0",
+            "fieldname": "is_urgent",
+            "fieldtype": "Check",
+            "label": "Urgent"
+        },
+        {
+            "fieldname": "incident_section",
+            "fieldtype": "Section Break",
+            "label": "Incident Details"
+        },
+        {
+            "fieldname": "incident_date",
+            "fieldtype": "Date",
+            "label": "Incident Date"
+        },
+        {
+            "fieldname": "incident_time",
+            "fieldtype": "Time",
+            "label": "Incident Time"
+        },
+        {
+            "fieldname": "location",
+            "fieldtype": "Small Text",
+            "label": "Location / Address",
+            "reqd": 1
+        },
+        {
+            "fieldname": "suburb",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Suburb"
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "City"
+        },
+        {
+            "fieldname": "province",
+            "fieldtype": "Select",
+            "label": "Province",
+            "options": "Gauteng\nWestern Cape\nKwaZulu-Natal\nEastern Cape\nFree State\nMpumalanga\nNorth West\nLimpopo\nNorthern Cape"
+        },
+        {
+            "fieldname": "postal_code",
+            "fieldtype": "Data",
+            "label": "Postal Code"
+        },
+        {
+            "fieldname": "gps_coordinates",
+            "fieldtype": "Data",
+            "label": "GPS Coordinates",
+            "description": "e.g. -25.7479, 28.2293"
+        },
+        {
+            "default": "0",
+            "fieldname": "location_verified",
+            "fieldtype": "Check",
+            "label": "Location Verified"
+        },
+        {
+            "fieldname": "column_break_2",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "animal_section",
+            "fieldtype": "Section Break",
+            "label": "Animals Involved"
+        },
+        {
+            "fieldname": "animal_count",
+            "fieldtype": "Int",
+            "label": "Total Animals",
+            "read_only": 1
+        },
+        {
+            "fieldname": "animals_involved",
+            "fieldtype": "Table",
+            "label": "Animals",
+            "options": "Animal Involved"
+        },
+        {
+            "fieldname": "allegation_section",
+            "fieldtype": "Section Break",
+            "label": "Allegation"
+        },
+        {
+            "fieldname": "suspected_violation",
+            "fieldtype": "Select",
+            "label": "Suspected Violation",
+            "options": "Neglect\nAbuse\nAbandonment\nInadequate Shelter\nLack of Water/Food\nPhysical Violence\nDog Fighting\nIllegal Breeding\nWildlife Crime\nTransport Cruelty\nOther"
+        },
+        {
+            "fieldname": "allegation_description",
+            "fieldtype": "Text Editor",
+            "label": "Description of Alleged Cruelty",
+            "reqd": 1
+        },
+        {
+            "fieldname": "evidence_photos",
+            "fieldtype": "Attach Image",
+            "label": "Evidence Photo"
+        },
+        {
+            "fieldname": "people_section",
+            "fieldtype": "Section Break",
+            "label": "People Involved"
+        },
+        {
+            "fieldname": "suspects",
+            "fieldtype": "Table",
+            "label": "Suspects",
+            "options": "Case Suspect"
+        },
+        {
+            "fieldname": "witnesses",
+            "fieldtype": "Table",
+            "label": "Witnesses",
+            "options": "Case Witness"
+        },
+        {
+            "fieldname": "visits_notes_section",
+            "fieldtype": "Section Break",
+            "label": "Inspections & Notes"
+        },
+        {
+            "fieldname": "inspection_visits",
+            "fieldtype": "Table",
+            "label": "Inspection Visits",
+            "options": "Inspection Visit"
+        },
+        {
+            "fieldname": "case_notes",
+            "fieldtype": "Table",
+            "label": "Case Notes",
+            "options": "Case Note"
+        },
+        {
+            "fieldname": "resolution_section",
+            "fieldtype": "Section Break",
+            "label": "Resolution"
+        },
+        {
+            "fieldname": "resolution_summary",
+            "fieldtype": "Text Editor",
+            "label": "Resolution Summary"
+        },
+        {
+            "fieldname": "resolution_outcome",
+            "fieldtype": "Select",
+            "label": "Outcome",
+            "options": "No Action Required\nAdvice/Education Given\nWarning Issued\nAnimal Seized\nAnimal Rehomed\nVeterinary Treatment\nProsecution\nReferred\nClosed - Unfounded\nClosed - Unable to Locate"
+        },
+        {
+            "fieldname": "legal_action_taken",
+            "fieldtype": "Select",
+            "label": "Legal Action Taken",
+            "options": "None\nWarning\nFine\nCourt Case Opened\nArrest\nNPA Referral"
+        },
+        {
+            "fieldname": "resolved_by",
+            "fieldtype": "Link",
+            "label": "Resolved By",
+            "options": "User"
+        },
+        {
+            "fieldname": "resolved_at",
+            "fieldtype": "Datetime",
+            "label": "Resolved At"
+        },
+        {
+            "fieldname": "closure_section",
+            "fieldtype": "Section Break",
+            "label": "Closure"
+        },
+        {
+            "fieldname": "closed_by",
+            "fieldtype": "Link",
+            "label": "Closed By",
+            "options": "User"
+        },
+        {
+            "fieldname": "closed_at",
+            "fieldtype": "Datetime",
+            "label": "Closed At"
+        },
+        {
+            "fieldname": "closure_reason",
+            "fieldtype": "Small Text",
+            "label": "Closure Reason"
+        },
+        {
+            "fieldname": "sla_section",
+            "fieldtype": "Section Break",
+            "label": "SLA Tracking"
+        },
+        {
+            "fieldname": "first_response_due",
+            "fieldtype": "Datetime",
+            "label": "First Response Due",
+            "read_only": 1
+        },
+        {
+            "fieldname": "first_responded_at",
+            "fieldtype": "Datetime",
+            "label": "First Responded At"
+        },
+        {
+            "fieldname": "response_time_hours",
+            "fieldtype": "Float",
+            "label": "Response Time (Hours)",
+            "read_only": 1
+        },
+        {
+            "fieldname": "resolution_due",
+            "fieldtype": "Datetime",
+            "label": "Resolution Due",
+            "read_only": 1
+        },
+        {
+            "fieldname": "resolution_time_hours",
+            "fieldtype": "Float",
+            "label": "Resolution Time (Hours)",
+            "read_only": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "sla_breached",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "SLA Breached",
+            "read_only": 1
+        }
+    ],
+    "has_webform": 1,
+    "index_web_pages_for_search": 1,
+    "is_submittable": 0,
+    "links": [],
+    "modified": "2025-06-14 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "SPCA CRM",
+    "name": "Cruelty Report",
+    "naming_rule": "By \\\"Naming Series\\\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "SPCA Inspector",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 0,
+            "print": 1,
+            "read": 1,
+            "report": 0,
+            "role": "SPCA Call Operator",
+            "share": 0,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "SPCA Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "search_fields": "case_id,location,allegation_description",
+    "show_name_in_global_search": 1,
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "case_id",
+    "track_changes": 1,
+    "track_seen": 1
+}

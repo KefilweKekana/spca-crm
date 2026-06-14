@@ -1,0 +1,135 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "autoname": "field:branch_name",
+    "creation": "2025-06-14 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "branch_name",
+        "branch_code",
+        "address_section",
+        "address",
+        "city",
+        "province",
+        "postal_code",
+        "contact_section",
+        "phone",
+        "email",
+        "manager",
+        "is_active"
+    ],
+    "fields": [
+        {
+            "fieldname": "branch_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Branch Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "branch_code",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Branch Code",
+            "reqd": 1
+        },
+        {
+            "fieldname": "address_section",
+            "fieldtype": "Section Break",
+            "label": "Address"
+        },
+        {
+            "fieldname": "address",
+            "fieldtype": "Small Text",
+            "label": "Street Address"
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "City"
+        },
+        {
+            "fieldname": "province",
+            "fieldtype": "Select",
+            "label": "Province",
+            "options": "Gauteng\nWestern Cape\nKwaZulu-Natal\nEastern Cape\nFree State\nMpumalanga\nNorth West\nLimpopo\nNorthern Cape"
+        },
+        {
+            "fieldname": "postal_code",
+            "fieldtype": "Data",
+            "label": "Postal Code"
+        },
+        {
+            "fieldname": "contact_section",
+            "fieldtype": "Section Break",
+            "label": "Contact"
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Data",
+            "label": "Phone",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "label": "Email",
+            "options": "Email"
+        },
+        {
+            "fieldname": "manager",
+            "fieldtype": "Link",
+            "label": "Branch Manager",
+            "options": "User"
+        },
+        {
+            "default": "1",
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Is Active"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2025-06-14 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "SPCA CRM",
+    "name": "SPCA Branch",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "SPCA Inspector",
+            "share": 0,
+            "write": 0
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+}

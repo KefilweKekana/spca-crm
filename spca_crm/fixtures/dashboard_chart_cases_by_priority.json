@@ -1,0 +1,15 @@
+[
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Cases by Priority",
+    "chart_name": "Cases by Priority",
+    "chart_type": "Group By",
+    "type": "Bar",
+    "document_type": "Cruelty Report",
+    "group_by_type": "Count",
+    "group_by_based_on": "priority",
+    "filters_json": "[]",
+    "is_standard": 1,
+    "module": "SPCA CRM"
+  }
+]

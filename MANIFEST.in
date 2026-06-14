@@ -1,0 +1,8 @@
+include *.txt
+include *.md
+recursive-include spca_crm *.py
+recursive-include spca_crm *.json
+recursive-include spca_crm *.css
+recursive-include spca_crm *.js
+recursive-include spca_crm *.html
+recursive-include spca_crm/public *.*

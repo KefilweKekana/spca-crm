@@ -1,0 +1,34 @@
+[
+  {
+    "doctype": "Notification",
+    "name": "Cruelty Report Assigned",
+    "document_type": "Cruelty Report",
+    "event": "Value Change",
+    "value_changed": "assigned_inspector",
+    "subject": "Cruelty Case {{ doc.name }} assigned to you",
+    "message": "<p>A cruelty case has been assigned to you.</p><ul><li><b>Case:</b> {{ doc.name }}</li><li><b>Priority:</b> {{ doc.priority }}</li><li><b>Location:</b> {{ doc.location or 'N/A' }}</li><li><b>SLA:</b> {{ doc.first_response_due }}</li></ul>",
+    "channel": "Email",
+    "recipients": [
+      {
+        "receiver_by_document_field": "assigned_inspector"
+      }
+    ],
+    "enabled": 1
+  },
+  {
+    "doctype": "Notification",
+    "name": "Cruelty Report Escalated",
+    "document_type": "Cruelty Report",
+    "event": "Value Change",
+    "value_changed": "status",
+    "subject": "Cruelty Case {{ doc.name }} Escalated",
+    "message": "<p>Cruelty case <b>{{ doc.name }}</b> has been escalated.</p><ul><li><b>Priority:</b> {{ doc.priority }}</li><li><b>Location:</b> {{ doc.location or 'N/A' }}</li><li><b>Assigned Inspector:</b> {{ doc.assigned_inspector or 'Unassigned' }}</li></ul>",
+    "channel": "Email",
+    "recipients": [
+      {
+        "receiver_by_role": "SPCA Manager"
+      }
+    ],
+    "enabled": 1
+  }
+]

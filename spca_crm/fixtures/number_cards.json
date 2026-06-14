@@ -1,0 +1,35 @@
+[
+  {
+    "doctype": "Number Card",
+    "name": "Open Cruelty Cases",
+    "label": "Open Cruelty Cases",
+    "document_type": "Cruelty Report",
+    "function": "Count",
+    "aggregate_function_based_on": "name",
+    "filters_json": "[[\"Cruelty Report\",\"status\",\"not in\",[\"Resolved\",\"Closed\"],false]]",
+    "is_standard": 1,
+    "module": "SPCA CRM"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "Cases Due Today",
+    "label": "Cases Due Today",
+    "document_type": "Cruelty Report",
+    "function": "Count",
+    "aggregate_function_based_on": "name",
+    "filters_json": "[[\"Cruelty Report\",\"resolution_due\",\"Timespan\",\"today\",false],[\"Cruelty Report\",\"status\",\"not in\",[\"Resolved\",\"Closed\"],false]]",
+    "is_standard": 1,
+    "module": "SPCA CRM"
+  },
+  {
+    "doctype": "Number Card",
+    "name": "SLA Breached",
+    "label": "SLA Breached",
+    "document_type": "Cruelty Report",
+    "function": "Count",
+    "aggregate_function_based_on": "name",
+    "filters_json": "[[\"Cruelty Report\",\"sla_breached\",\"=\",1,false],[\"Cruelty Report\",\"status\",\"not in\",[\"Resolved\",\"Closed\"],false]]",
+    "is_standard": 1,
+    "module": "SPCA CRM"
+  }
+]

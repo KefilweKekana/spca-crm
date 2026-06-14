@@ -1,0 +1,11 @@
+{
+    "doctype": "Print Format",
+    "name": "SPCA Case File",
+    "print_format_name": "SPCA Case File",
+    "doc_type": "Cruelty Report",
+    "standard": "No",
+    "custom_format": 1,
+    "print_format_type": "Jinja",
+    "html": "<div class=\"print-format\">\n  <h2>SPCA Cruelty Case File</h2>\n  <hr>\n  <p><b>Case ID:</b> {{ doc.name }}</p>\n  <p><b>Report Date:</b> {{ doc.report_date }}</p>\n  <p><b>Priority:</b> {{ doc.priority }}</p>\n  <p><b>Status:</b> {{ doc.status }}</p>\n  <p><b>Inspector:</b> {{ doc.assigned_inspector or 'Unassigned' }}</p>\n  <p><b>Location:</b> {{ doc.location }}, {{ doc.suburb }}, {{ doc.city }}</p>\n  <hr>\n  <h4>Allegation</h4>\n  <p>{{ doc.allegation_description or '' }}</p>\n  <hr>\n  <h4>Animals Involved</h4>\n  <table class=\"table table-bordered\">\n    <tr><th>Species</th><th>Breed</th><th>Qty</th><th>Condition</th><th>Outcome</th></tr>\n    {% for a in doc.animals_involved %}\n    <tr>\n      <td>{{ a.species }}</td>\n      <td>{{ a.breed or '-' }}</td>\n      <td>{{ a.quantity }}</td>\n      <td>{{ a.condition or '-' }}</td>\n      <td>{{ a.outcome or '-' }}</td>\n    </tr>\n    {% endfor %}\n  </table>\n  <hr>\n  <h4>Inspection Visits</h4>\n  {% for v in doc.inspection_visits %}\n  <p><b>{{ v.visit_date }}</b> &mdash; {{ v.inspector }} &mdash; {{ v.visit_outcome }}</p>\n  <p>{{ v.findings or '' }}</p>\n  {% endfor %}\n  <hr>\n  <h4>Resolution</h4>\n  <p><b>Outcome:</b> {{ doc.resolution_outcome or 'Pending' }}</p>\n  <p>{{ doc.resolution_summary or '' }}</p>\n</div>",
+    "module": "SPCA CRM"
+}

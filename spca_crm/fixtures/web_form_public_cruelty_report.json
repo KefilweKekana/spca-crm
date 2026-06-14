@@ -1,0 +1,87 @@
+[
+  {
+    "doctype": "Web Form",
+    "name": "public-cruelty-report",
+    "title": "Report Animal Cruelty",
+    "route": "report-cruelty",
+    "doc_type": "Cruelty Report",
+    "module": "SPCA CRM",
+    "is_standard": 1,
+    "published": 1,
+    "login_required": 0,
+    "allow_multiple": 1,
+    "allow_edit": 0,
+    "show_list": 0,
+    "show_sidebar": 0,
+    "introduction_text": "Report suspected animal cruelty. Your information helps us protect animals.",
+    "success_title": "Report Received",
+    "success_message": "Thank you. Your reference number will be sent to you shortly.",
+    "web_form_fields": [
+      {
+        "fieldname": "is_anonymous",
+        "fieldtype": "Check",
+        "label": "Report Anonymously",
+        "reqd": 0
+      },
+      {
+        "fieldname": "complainant_name",
+        "fieldtype": "Data",
+        "label": "Your Name",
+        "depends_on": "eval:!doc.is_anonymous"
+      },
+      {
+        "fieldname": "complainant_phone",
+        "fieldtype": "Data",
+        "label": "Phone Number",
+        "depends_on": "eval:!doc.is_anonymous"
+      },
+      {
+        "fieldname": "complainant_email",
+        "fieldtype": "Data",
+        "label": "Email",
+        "depends_on": "eval:!doc.is_anonymous"
+      },
+      {
+        "fieldname": "location",
+        "fieldtype": "Small Text",
+        "label": "Incident Address / Location",
+        "reqd": 1
+      },
+      {
+        "fieldname": "gps_coordinates",
+        "fieldtype": "Data",
+        "label": "GPS Coordinates (optional)"
+      },
+      {
+        "fieldname": "city",
+        "fieldtype": "Data",
+        "label": "City"
+      },
+      {
+        "fieldname": "province",
+        "fieldtype": "Select",
+        "label": "Province",
+        "options": "Gauteng\nWestern Cape\nKwaZulu-Natal\nEastern Cape\nFree State\nMpumalanga\nNorth West\nLimpopo\nNorthern Cape"
+      },
+      {
+        "fieldname": "suspected_violation",
+        "fieldtype": "Select",
+        "label": "Type of Cruelty",
+        "options": "Neglect\nAbuse\nAbandonment\nInadequate Shelter\nLack of Water/Food\nPhysical Violence\nDog Fighting\nIllegal Breeding\nWildlife Crime\nTransport Cruelty\nOther"
+      },
+      {
+        "fieldname": "allegation_description",
+        "fieldtype": "Text Editor",
+        "label": "Describe what happened",
+        "reqd": 1
+      },
+      {
+        "fieldname": "priority",
+        "fieldtype": "Select",
+        "label": "Urgency",
+        "options": "Low\nMedium\nHigh\nCritical",
+        "default": "Medium"
+      }
+    ]
+  }
+]

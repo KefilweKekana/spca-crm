@@ -1,0 +1,71 @@
+{
+    "actions": [],
+    "creation": "2025-06-14 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "suspect_name",
+        "phone",
+        "id_number",
+        "relationship_to_animal",
+        "address",
+        "is_known_offender",
+        "notes"
+    ],
+    "fields": [
+        {
+            "fieldname": "suspect_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Name",
+            "reqd": 1
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Data",
+            "label": "Phone",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "id_number",
+            "fieldtype": "Data",
+            "label": "ID Number"
+        },
+        {
+            "fieldname": "relationship_to_animal",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Relationship to Animal",
+            "options": "Owner\nCaretaker\nNeighbour\nPasserby\nFarmer\nTrader\nUnknown\nOther"
+        },
+        {
+            "fieldname": "address",
+            "fieldtype": "Small Text",
+            "label": "Address"
+        },
+        {
+            "default": "0",
+            "fieldname": "is_known_offender",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "Known Offender"
+        },
+        {
+            "fieldname": "notes",
+            "fieldtype": "Small Text",
+            "label": "Notes"
+        }
+    ],
+    "istable": 1,
+    "links": [],
+    "modified": "2025-06-14 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "SPCA CRM",
+    "name": "Case Suspect",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

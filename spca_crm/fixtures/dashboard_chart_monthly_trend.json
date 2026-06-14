@@ -1,0 +1,15 @@
+[
+  {
+    "doctype": "Dashboard Chart",
+    "name": "Monthly Trend",
+    "chart_name": "Monthly Trend",
+    "chart_type": "Count",
+    "type": "Line",
+    "document_type": "Cruelty Report",
+    "based_on": "report_date",
+    "time_interval": "Monthly",
+    "filters_json": "[]",
+    "is_standard": 1,
+    "module": "SPCA CRM"
+  }
+]

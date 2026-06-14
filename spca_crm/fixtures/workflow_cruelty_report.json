@@ -1,0 +1,128 @@
+[
+  {
+    "doctype": "Workflow",
+    "workflow_name": "Cruelty Report Workflow",
+    "document_type": "Cruelty Report",
+    "is_active": 1,
+    "override_status": 0,
+    "send_email_alert": 0,
+    "workflow_state_field": "status",
+    "states": [
+      {
+        "state": "Draft",
+        "doc_status": "0",
+        "update_field": "status",
+        "update_value": "Draft",
+        "allow_edit": "SPCA Call Operator"
+      },
+      {
+        "state": "Assigned",
+        "doc_status": "0",
+        "update_field": "status",
+        "update_value": "Assigned",
+        "allow_edit": "SPCA Manager"
+      },
+      {
+        "state": "In Progress",
+        "doc_status": "0",
+        "update_field": "status",
+        "update_value": "In Progress",
+        "allow_edit": "SPCA Inspector"
+      },
+      {
+        "state": "Escalated",
+        "doc_status": "0",
+        "update_field": "status",
+        "update_value": "Escalated",
+        "allow_edit": "SPCA Manager"
+      },
+      {
+        "state": "Resolved",
+        "doc_status": "0",
+        "update_field": "status",
+        "update_value": "Resolved",
+        "allow_edit": "SPCA Inspector"
+      },
+      {
+        "state": "Closed",
+        "doc_status": "0",
+        "update_field": "status",
+        "update_value": "Closed",
+        "allow_edit": "SPCA Manager"
+      },
+      {
+        "state": "Reopened",
+        "doc_status": "0",
+        "update_field": "status",
+        "update_value": "Reopened",
+        "allow_edit": "SPCA Manager"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Draft",
+        "action": "Assign",
+        "next_state": "Assigned",
+        "allowed": "SPCA Manager",
+        "allow_self_approval": 1,
+        "condition": "doc.assigned_inspector"
+      },
+      {
+        "state": "Assigned",
+        "action": "Start Investigation",
+        "next_state": "In Progress",
+        "allowed": "SPCA Inspector",
+        "allow_self_approval": 1
+      },
+      {
+        "state": "In Progress",
+        "action": "Escalate",
+        "next_state": "Escalated",
+        "allowed": "SPCA Inspector",
+        "allow_self_approval": 1
+      },
+      {
+        "state": "Escalated",
+        "action": "Resolve",
+        "next_state": "Resolved",
+        "allowed": "SPCA Manager",
+        "allow_self_approval": 1
+      },
+      {
+        "state": "In Progress",
+        "action": "Resolve",
+        "next_state": "Resolved",
+        "allowed": "SPCA Inspector",
+        "allow_self_approval": 1
+      },
+      {
+        "state": "Resolved",
+        "action": "Close",
+        "next_state": "Closed",
+        "allowed": "SPCA Manager",
+        "allow_self_approval": 1
+      },
+      {
+        "state": "Resolved",
+        "action": "Reopen",
+        "next_state": "Reopened",
+        "allowed": "SPCA Manager",
+        "allow_self_approval": 1
+      },
+      {
+        "state": "Closed",
+        "action": "Reopen",
+        "next_state": "Reopened",
+        "allowed": "SPCA Manager",
+        "allow_self_approval": 1
+      },
+      {
+        "state": "Reopened",
+        "action": "Assign",
+        "next_state": "Assigned",
+        "allowed": "SPCA Manager",
+        "allow_self_approval": 1
+      }
+    ]
+  }
+]

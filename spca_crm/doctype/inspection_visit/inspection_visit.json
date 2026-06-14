@@ -1,0 +1,86 @@
+{
+    "actions": [],
+    "creation": "2025-06-14 12:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "visit_date",
+        "inspector",
+        "accompanied_by",
+        "visit_outcome",
+        "findings",
+        "actions_taken",
+        "follow_up_required",
+        "follow_up_date",
+        "evidence_photos"
+    ],
+    "fields": [
+        {
+            "default": "Today",
+            "fieldname": "visit_date",
+            "fieldtype": "Datetime",
+            "in_list_view": 1,
+            "label": "Visit Date & Time",
+            "reqd": 1
+        },
+        {
+            "fieldname": "inspector",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "Inspector",
+            "options": "User",
+            "reqd": 1
+        },
+        {
+            "fieldname": "accompanied_by",
+            "fieldtype": "Data",
+            "label": "Accompanied By"
+        },
+        {
+            "fieldname": "visit_outcome",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Outcome",
+            "options": "No Action Required\nAdvice Given\nWarning Issued\nAnimal Seized\nProsecution Recommended\nReferred\nFollow-up Required\nEscalated"
+        },
+        {
+            "fieldname": "findings",
+            "fieldtype": "Text Editor",
+            "label": "Findings"
+        },
+        {
+            "fieldname": "actions_taken",
+            "fieldtype": "Text Editor",
+            "label": "Actions Taken"
+        },
+        {
+            "default": "0",
+            "fieldname": "follow_up_required",
+            "fieldtype": "Check",
+            "label": "Follow-up Required"
+        },
+        {
+            "depends_on": "eval:doc.follow_up_required",
+            "fieldname": "follow_up_date",
+            "fieldtype": "Date",
+            "label": "Follow-up Date"
+        },
+        {
+            "fieldname": "evidence_photos",
+            "fieldtype": "Attach Image",
+            "label": "Evidence Photo"
+        }
+    ],
+    "istable": 1,
+    "links": [],
+    "modified": "2025-06-14 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "SPCA CRM",
+    "name": "Inspection Visit",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}
