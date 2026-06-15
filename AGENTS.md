@@ -17,11 +17,11 @@
 - Child table rows are `Document` instances; iterate with `doc.get("table_field", [])`.
 - SLA times are calculated in `CrueltyReport.set_sla_due_dates()` based on priority.
 - Use `frappe.log_error` for scheduled-task failures so they don't break the scheduler.
-- Web form conversion is permission-gated via `SPCA CRM Settings.role_allowed_to_convert`.
+- Web form conversion is permission-gated via `SPCA Helpdesk Settings.role_allowed_to_convert`.
 
 ## Web Form Integration
 
-The public webform DocType is configured in **SPCA CRM Settings** (`web_form_doctype`, default `Cruelty_Form`).
+The public webform DocType is configured in **SPCA Helpdesk Settings** (`web_form_doctype`, default `Cruelty_Form`).
 
 - `webform_hooks.on_cruelty_form_after_insert` runs on `after_insert` of that DocType.
 - `utils.create_cruelty_report_from_webform()` maps fields dynamically using `Web Form Field Mapping`.
@@ -58,6 +58,6 @@ When modifying fixtures, update both the JSON file in `fixtures/` and the `load_
 Edit `CrueltyReport.set_sla_due_dates()` in `cruelty_report.py`.
 
 ### Connect a different public web form DocType
-1. Go to **SPCA CRM Settings** and change `web_form_doctype`.
+1. Go to **SPCA Helpdesk Settings** and change `web_form_doctype`.
 2. Update the field mapping table.
 3. Ensure the DocType's `after_insert` hook is wired in `hooks.py`.

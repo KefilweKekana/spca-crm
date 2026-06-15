@@ -13,7 +13,7 @@ def on_cruelty_form_after_insert(doc, method=None):
             }
         }
     """
-    settings = frappe.get_doc("SPCA CRM Settings", "SPCA CRM Settings")
+    settings = frappe.get_doc("SPCA Helpdesk Settings", "SPCA Helpdesk Settings")
     if doc.doctype != settings.web_form_doctype:
         return
     if not settings.auto_convert_submissions:

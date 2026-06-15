@@ -9,6 +9,8 @@
     "group_by_type": "Count",
     "group_by_based_on": "status",
     "filters_json": "[]",
+    "color": "#449CF0",
+    "custom_options": "{\"colors\": [\"#B3B3B3\", \"#449CF0\", \"#ECAD4B\", \"#CB2929\", \"#28A745\", \"#1F9D57\", \"#7575FF\"]}",
     "is_standard": 0,
     "module": "SPCA CRM"
   }

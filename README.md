@@ -23,7 +23,7 @@ An ERPNext module for SPCA organisations to manage cruelty reports, inspections,
 | Cruelty Report | Main case file |
 | Complainant | Person reporting cruelty (re-usable) |
 | SPCA Branch | Branch/region configuration |
-| SPCA CRM Settings | Web form mapping, defaults and permissions |
+| SPCA Helpdesk Settings | Web form mapping, defaults and permissions |
 | Animal Involved | Child table of animals in a case |
 | Case Suspect | Child table of suspects |
 | Case Witness | Child table of witnesses |
@@ -45,7 +45,7 @@ bench --site your-site install-app spca_crm
 bench --site your-site migrate
 ```
 
-After install, open **SPCA CRM Settings** and confirm:
+After install, open **SPCA Helpdesk Settings** and confirm:
 - **Web Form DocType** = `Cruelty_Form`
 - **Web Form Route** = `report`
 - Configure field mapping if your `Cruelty_Form` fields differ from the defaults.
@@ -55,10 +55,10 @@ After install, open **SPCA CRM Settings** and confirm:
 Submissions from your existing `Cruelty_Form` webform are automatically converted into `Cruelty Report` records via the `after_insert` hook.
 
 ### Manual conversion
-Open any `Cruelty_Form` record and use **SPCA → Convert to SPCA Case**. This action is gated by the role configured in **SPCA CRM Settings** (`role_allowed_to_convert`).
+Open any `Cruelty_Form` record and use **SPCA → Convert to SPCA Case**. This action is gated by the role configured in **SPCA Helpdesk Settings** (`role_allowed_to_convert`).
 
 ### Permission
-Set **Role Allowed to Convert Web Submissions** in SPCA CRM Settings. The automatic conversion bypasses this check (system process), but manual conversion respects it.
+Set **Role Allowed to Convert Web Submissions** in SPCA Helpdesk Settings. The automatic conversion bypasses this check (system process), but manual conversion respects it.
 
 ## Inspector Assignment
 

@@ -1,7 +1,7 @@
 from frappe.model.document import Document
 
 
-class SPCACRMSettings(Document):
+class SPCAHelpdeskSettings(Document):
     def validate(self):
         if not self.web_form_doctype:
             self.web_form_doctype = "Cruelty_Form"

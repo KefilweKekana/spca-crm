@@ -12,7 +12,7 @@ required_apps = ["erpnext"]
 
 # ------------------ Fixtures ------------------
 fixtures = [
-    "SPCA CRM Settings",
+    "SPCA Helpdesk Settings",
     {
         "dt": "Workflow",
         "filters": [["document_type", "in", ["Cruelty Report"]]],

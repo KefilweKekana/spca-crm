@@ -1,16 +1,17 @@
 [
   {
     "doctype": "Workspace",
-    "name": "SPCA CRM",
+    "name": "SPCA Helpdesk",
     "type": "Workspace",
     "title": "SPCA Helpdesk",
     "for_user": "",
     "parent_page": "",
-    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPCA Cruelty Report Helpdesk</span>\",\"level\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Cruelty Cases\"}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cases Due Today\"}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"SLA Breached\"}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Cases by Status\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Cases by Priority\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Trend\",\"col\":6}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Cruelty Report\",\"type\":\"DocType\",\"doc_view\":\"New\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cruelty Reports\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Complainants\",\"type\":\"DocType\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPCA CRM Settings\",\"type\":\"DocType\",\"doc_view\":\"Form\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPCA Branches\",\"type\":\"DocType\"}}]",
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">SPCA Cruelty Report Helpdesk</span>\",\"level\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Cruelty Cases\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Cases Due Today\",\"col\":4}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"SLA Breached\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Cases by Status\",\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Cases by Priority\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Trend\",\"col\":6}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Cruelty Report\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cruelty Reports\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Complainants\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Helpdesk Settings\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SPCA Branches\",\"col\":3}}]",
     "is_standard": 1,
     "public": 1,
     "label": "SPCA Helpdesk",
     "icon": "heart",
+    "indicator_color": "pink",
     "module": "SPCA CRM",
     "hide_custom": 0,
     "number_cards": [
@@ -46,30 +47,35 @@
         "type": "DocType",
         "label": "New Cruelty Report",
         "link_to": "Cruelty Report",
-        "doc_view": "New"
+        "doc_view": "New",
+        "color": "Green"
       },
       {
         "type": "DocType",
         "label": "Cruelty Reports",
         "link_to": "Cruelty Report",
-        "doc_view": "List"
+        "doc_view": "List",
+        "color": "Blue"
       },
       {
         "type": "DocType",
         "label": "Complainants",
         "link_to": "Complainant",
-        "doc_view": "List"
+        "doc_view": "List",
+        "color": "Cyan"
       },
       {
         "type": "DocType",
-        "label": "SPCA CRM Settings",
-        "link_to": "SPCA CRM Settings"
+        "label": "Helpdesk Settings",
+        "link_to": "SPCA Helpdesk Settings",
+        "color": "Grey"
       },
       {
         "type": "DocType",
         "label": "SPCA Branches",
         "link_to": "SPCA Branch",
-        "doc_view": "List"
+        "doc_view": "List",
+        "color": "Orange"
       }
     ],
     "roles": [

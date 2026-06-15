@@ -37,8 +37,8 @@ def create_default_branch():
 
 
 def create_default_settings():
-    if not frappe.db.exists("SPCA CRM Settings", "SPCA CRM Settings"):
-        settings = frappe.new_doc("SPCA CRM Settings")
+    if not frappe.db.exists("SPCA Helpdesk Settings", "SPCA Helpdesk Settings"):
+        settings = frappe.new_doc("SPCA Helpdesk Settings")
         settings.web_form_doctype = "Cruelty_Form"
         settings.webform_route = "report"
         settings.allow_anonymous_reports = 1

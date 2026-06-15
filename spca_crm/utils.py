@@ -30,7 +30,7 @@ def create_cruelty_report_from_webform(source_doc, skip_permission_check=False):
 
     source_doc can be a dict or a Frappe Document.
     """
-    settings = frappe.get_doc("SPCA CRM Settings", "SPCA CRM Settings")
+    settings = frappe.get_doc("SPCA Helpdesk Settings", "SPCA Helpdesk Settings")
     if not settings.auto_convert_submissions:
         return None
 
@@ -149,7 +149,7 @@ def get_or_create_complainant(data: dict) -> str:
 @frappe.whitelist()
 def convert_webform_to_case(source_doctype, source_name):
     """Manual conversion whitelist for users with permission."""
-    settings = frappe.get_doc("SPCA CRM Settings", "SPCA CRM Settings")
+    settings = frappe.get_doc("SPCA Helpdesk Settings", "SPCA Helpdesk Settings")
     _check_conversion_permission(settings)
 
     if source_doctype != settings.web_form_doctype:

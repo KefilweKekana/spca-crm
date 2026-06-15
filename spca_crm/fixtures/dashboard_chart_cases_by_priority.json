@@ -9,6 +9,8 @@
     "group_by_type": "Count",
     "group_by_based_on": "priority",
     "filters_json": "[]",
+    "color": "#ECAD4B",
+    "custom_options": "{\"colors\": [\"#28A745\", \"#449CF0\", \"#ECAD4B\", \"#CB2929\"]}",
     "is_standard": 0,
     "module": "SPCA CRM"
   }
